@@ -5,7 +5,6 @@ import dev.project.feedback360.models.UserEntity.UserRequest;
 import dev.project.feedback360.models.UserEntity.UserResponseDTO;
 import dev.project.feedback360.service.UserService;
 import jakarta.validation.Valid;
-import jakarta.websocket.server.PathParam;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,9 +22,9 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<String> createUser(@Valid @RequestBody UserRequest request) {
-        service.createUser(request);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Usuario criado com sucesso!");
+    public ResponseEntity<UserResponseDTO> createUser(@Valid @RequestBody UserRequest request) {
+        UserResponseDTO user = service.createUser(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
 
     @GetMapping
@@ -44,8 +43,8 @@ public class UserController {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUSer(@PathVariable Long id) {
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         service.deleteUser(id);
-        return ResponseEntity.status(HttpStatus.OK).body("Usuario com ID:" +id+ " excluido com sucesso");
+        return ResponseEntity.ok(String.format("Usuario com ID: %d deletado com sucesso!", id));
     }
 }

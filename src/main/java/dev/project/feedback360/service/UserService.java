@@ -48,8 +48,10 @@ public class UserService {
     }
 
     public void deleteUser(Long id) {
-        if (repository.existsById(id))
+        if (repository.existsById(id)) {
             repository.deleteById(id);
+            return;
+        }
         throw new EntityNotFoundException("Usuario não existe");
     }
 }
