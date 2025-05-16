@@ -1,8 +1,8 @@
 package dev.project.feedback360.service;
 
-import dev.project.feedback360.models.UserEntity.User;
-import dev.project.feedback360.models.UserEntity.UserResponseDTO;
-import dev.project.feedback360.models.UserEntity.UserRequest;
+import dev.project.feedback360.models.Users.User;
+import dev.project.feedback360.models.Users.UserResponseDTO;
+import dev.project.feedback360.models.Users.UserRequest;
 import dev.project.feedback360.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package dev.project.feedback360.models.UserEntity;
+package dev.project.feedback360.models.Users;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

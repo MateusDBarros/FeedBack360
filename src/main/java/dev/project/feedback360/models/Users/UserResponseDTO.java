@@ -1,4 +1,4 @@
-package dev.project.feedback360.models.UserEntity;
+package dev.project.feedback360.models.Users;
 
 public record UserResponseDTO(
         Long id,

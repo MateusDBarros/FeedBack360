@@ -1,8 +1,8 @@
 package dev.project.feedback360.controller;
 
 
-import dev.project.feedback360.models.UserEntity.UserRequest;
-import dev.project.feedback360.models.UserEntity.UserResponseDTO;
+import dev.project.feedback360.models.Users.UserRequest;
+import dev.project.feedback360.models.Users.UserResponseDTO;
 import dev.project.feedback360.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
